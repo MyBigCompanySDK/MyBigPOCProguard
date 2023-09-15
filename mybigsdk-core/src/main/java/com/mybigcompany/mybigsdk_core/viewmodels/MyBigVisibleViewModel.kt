@@ -1,10 +1,12 @@
 package com.mybigcompany.mybigsdk_core.viewmodels
 
 import android.util.Log
+import androidx.annotation.Keep
 import com.mybigcompany.mybigsdk_core.data.MyBigBigData
 import com.mybigcompany.mybigsdk_core.data.MyBigData
 
-class MyBigViewModel {
+@Keep
+class MyBigVisibleViewModel {
     private val myBigBigData = MyBigBigData(
         MyBigData(
             "my big string 1",
