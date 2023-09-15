@@ -41,30 +41,10 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 }
 
-ext {
-    var PUBLISH_GROUP_ID = "io.github.MyBigCompanySDK"
-    var PUBLISH_VERSION = "1.0.0"
-    var PUBLISH_ARTIFACT_ID = "MyBigPOCProguard"
-    var PUBLISH_DESCRIPTION = "my big sdk poc"
-    var PUBLISH_URL = "https://github.com/MyBigCompanySDK/MyBigPOCProguard"
-    var PUBLISH_LICENSE_NAME = "Apache License 2.0"
-    var PUBLISH_LICENSE_URL =
-        "https://github.com/MyBigCompanySDK/MyBigPOCProguard/blob/master/LICENSE"
-    var PUBLISH_DEVELOPER_ID = "TheScreamer74"
-    var PUBLISH_DEVELOPER_NAME = "Thomas Huyghues"
-    var PUBLISH_DEVELOPER_EMAIL = "thomas.huyghues@miam.tech"
-    var PUBLISH_SCM_CONNECTION =
-        "scm:git:github.com/MyBigCompanySDK/MyBigPOCProguard.git"
-    var PUBLISH_SCM_DEVELOPER_CONNECTION =
-        "scm:git:ssh://github.com/MyBigCompanySDK/MyBigPOCProguard.git"
-    var PUBLISH_SCM_URL =
-        "https://github.com/MyBigCompanySDK/MyBigPOCProguard/tree/master"
-}
-
 val PUBLISH_GROUP_ID by extra ( "io.github.MyBigCompanySDK")
 val PUBLISH_VERSION by extra ("1.0.0")
-val PUBLISH_ARTIFACT_ID by extra("MyBigPOCProguard")
-val PUBLISH_DESCRIPTION by extra ("my big sdk poc")
+val PUBLISH_ARTIFACT_ID by extra("My Big SDK Core")
+val PUBLISH_DESCRIPTION by extra ("my big sdk core")
 val PUBLISH_URL by extra ("https://github.com/MyBigCompanySDK/MyBigPOCProguard")
 val PUBLISH_LICENSE_NAME by extra ("Apache License 2.0")
 val PUBLISH_LICENSE_URL by extra ("https://github.com/MyBigCompanySDK/MyBigPOCProguard/blob/master/LICENSE")
