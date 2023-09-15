@@ -43,7 +43,7 @@ dependencies {
 
 val PUBLISH_GROUP_ID by extra ( "io.github.MyBigCompanySDK")
 val PUBLISH_VERSION by extra ("1.0.0")
-val PUBLISH_ARTIFACT_ID by extra("My Big SDK Core")
+val PUBLISH_ARTIFACT_ID by extra("MyBigSDKCore")
 val PUBLISH_DESCRIPTION by extra ("my big sdk core")
 val PUBLISH_URL by extra ("https://github.com/MyBigCompanySDK/MyBigPOCProguard")
 val PUBLISH_LICENSE_NAME by extra ("Apache License 2.0")
