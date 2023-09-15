@@ -1,28 +1,17 @@
-// Create variables with empty default values
-ext["signing.keyId"] = ''
-ext["signing.password"] = ''
-ext["signing.secretKeyRingFile"] = ''
-ext["ossrhUsername"] = ''
-ext["ossrhPassword"] = ''
-ext["sonatypeStagingProfileId"] = ''
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
 
-File secretPropsFile = project.rootProject.file('local.properties')
-if (secretPropsFile.exists()) {
-    // Read local.properties file first if it exists
-    Properties p = new Properties()
-    new FileInputStream(secretPropsFile).withCloseable { is -> p.load(is) }
-    p.each { name, value -> ext[name] = value }
-} else {
-    // Use system environment variables
-    ext["ossrhUsername"] = System.getenv('OSSRH_USERNAME')
-    ext["ossrhPassword"] = System.getenv('OSSRH_PASSWORD')
-    ext["sonatypeStagingProfileId"] = System.getenv('SONATYPE_STAGING_PROFILE_ID')
-    ext["signing.keyId"] = System.getenv('SIGNING_KEY_ID')
-    ext["signing.password"] = System.getenv('SIGNING_PASSWORD')
-    ext["signing.secretKeyRingFile"] = System.getenv('SIGNING_SECRET_KEY_RING_FILE')
-}
+ext["signing.keyId"] = properties.getProperty("SIGNING_KEY_ID")
+ext["signing.secretKeyRingFile"] = properties.getProperty("SIGNING_SECRET_KEY_RING_FILE")
+ext["signing.password"] = properties.getProperty("SIGNING_PASSWORD")
+ext["ossrhUsername"] =  properties.getProperty("OSSR_USER_NAME")
+ext["ossrhPassword"] =  properties.getProperty("OSSR_PASSWORD")
+ext["sonatypeStagingProfileId"] = properties.getProperty("SONATYPE_STAGING_PROFILE_ID")
+ext["version"] = "1.0.0"
+
 
 // Set up Sonatype repository
+
 nexusPublishing {
     repositories {
         sonatype {
