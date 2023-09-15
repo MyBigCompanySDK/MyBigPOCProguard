@@ -14,8 +14,8 @@ artifacts {
     archives androidSourcesJar
 }
 
-group = ext.PUBLISH_GROUP_ID
-version = ext.PUBLISH_VERSION
+group = PUBLISH_GROUP_ID
+version = PUBLISH_VERSION
 
 afterEvaluate {
     publishing {

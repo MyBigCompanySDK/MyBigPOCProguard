@@ -55,4 +55,4 @@ val PUBLISH_SCM_CONNECTION by extra ("scm:git:github.com/MyBigCompanySDK/MyBigPO
 val PUBLISH_SCM_DEVELOPER_CONNECTION by extra ("scm:git:ssh://github.com/MyBigCompanySDK/MyBigPOCProguard.git")
 val PUBLISH_SCM_URL by extra ("https://github.com/MyBigCompanySDK/MyBigPOCProguard/tree/master")
 
-apply(from = "${rootProject.projectDir}/scripts/publish-module.gradle")
+apply("${rootProject.projectDir}/scripts/publish-module.gradle")
